@@ -1,44 +1,35 @@
-<!--=================================
-    Deal of the day 
-===================================== -->
 {% load static %}
-<section class="section-margin">
-    <div class="container-fluid">
-        <div class="promo-section-heading">
-            <h2>Deal of the day up to 20% off Special offer</h2>
+<section class="">
+    <div class="container">
+        <div class="section-title section-title--bordered">
+            <h2>RELATED BOOKS</h2>
         </div>
-        <div class="product-slider with-countdown  slider-border-single-row sb-slick-slider" data-slick-setting='{
-        "autoplay": true,
-        "autoplaySpeed": 8000,
-        "slidesToShow": 6,
-        "dots":true
-    }' data-slick-responsive='[
-        {"breakpoint":1400, "settings": {"slidesToShow": 4} },
-        {"breakpoint":992, "settings": {"slidesToShow": 3} },
-        {"breakpoint":768, "settings": {"slidesToShow": 2} },
-        {"breakpoint":575, "settings": {"slidesToShow": 2} },
-        {"breakpoint":490, "settings": {"slidesToShow": 1} }
-    ]'>
-            
-
-
-
-            {% for book in books %}
+        <div class="product-slider sb-slick-slider slider-border-single-row" data-slick-setting='{
+    "autoplay": true,
+    "autoplaySpeed": 8000,
+    "slidesToShow": 4,
+    "dots":true
+}' data-slick-responsive='[
+    {"breakpoint":1200, "settings": {"slidesToShow": 4} },
+    {"breakpoint":992, "settings": {"slidesToShow": 3} },
+    {"breakpoint":768, "settings": {"slidesToShow": 2} },
+    {"breakpoint":480, "settings": {"slidesToShow": 1} }
+]'>
+        {% for book in books %}
             <div class="single-slide">
                 <div class="product-card">
                     <div class="product-header">
-                        <a href="" class="author">
-                            {{ book.book_name }}
+                        <a href="#" class="author">
+                            {{book.author}}
                         </a>
-                        <h3><a href="book/{{book.book_name}}">{{book.author}}
-                          </a>
-                        </h3>
+                        <h3><a href="{{book.book_name}}">{{ book.book_name }}
+                          </a></h3>
                     </div>
                     <div class="product-card--body">
                         <div class="card-image">
                             <img src="{% static 'image/products/product-2.jpg' %}" alt="">
                             <div class="hover-contents">
-                                <a href="book/{{book.book_name}}" class="hover-image">
+                                <a href="{{book.book_name}}" class="hover-image">
                                     <img src="{% static 'image/products/product-1.jpg' %}" alt="">
                                 </a>
                                 <div class="hover-btns">
@@ -58,15 +49,11 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="count-down-block">
-                            <div class="product-countdown" data-countdown="01/05/2020"></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            {% endfor %}
-
+        {% endfor %}    
         </div>
     </div>
 </section>

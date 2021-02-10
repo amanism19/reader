@@ -1,0 +1,39 @@
+<!-- had to be edited -->
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="site-wrapper" id="top">
+        {% block navbar %}
+            {% include 'include/navbar.html' %}
+        {% endblock navbar %}
+
+        <!-- breadcrumb -->
+
+        {% include 'bookDetail/breadcrumb.html' %}
+
+        <main class="inner-page-sec-padding-bottom">
+            
+            <!-- bookdetail -->
+            {% include 'bookDetail/bookDetail.html' %}
+<!--=================================
+    RELATED PRODUCTS BOOKS
+===================================== -->
+        {% include 'bookDetail/relatedBook.html' %}
+        <!-- Modal -->
+        {% include 'bookDetail/modal.html' %}   
+        </main>
+    </div>
+    {% block footer %}
+    <!--=================================
+    Brands Slider
+    ===================================== -->
+    <!--=================================
+    Footer Area
+    ===================================== -->
+        {% include 'include/footer.html' %}
+        
+    {% endblock footer %}
+    <!-- Use Minified Plugins Version For Fast Page Load -->
+
+{% endblock content %}  

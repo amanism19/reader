@@ -1,0 +1,15 @@
+<!-- breadcrumb -->
+<section class="breadcrumb-section">
+    <h2 class="sr-only">Site Breadcrumb</h2>
+    <div class="container">
+        <div class="breadcrumb-contents">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/book/{{book.book_name}}">{{book.book_name}}</a></li>
+                    <li class="breadcrumb-item active">Chapter - {{chap.chapter_sequence}} : {{chap.chapter_title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>

@@ -2,18 +2,18 @@ from django.db import models
 
 # Create your models here.
 class Book_Master(models.Model):
-    book name = models.CharField(max_length=255,unique=True)
+    book_name = models.CharField(max_length=255,unique=True)
     alternate_name = models.CharField(max_length=255,unique=True)
-    cover_image = models.CharField(max_length=255)
+    cover_img = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
-    language = models.CharField(max_length=255)
+    lang = models.CharField(max_length=255)
     status = models.CharField(max_length=255)
     synopsis = models.CharField(max_length=255)
     created_at = models.DateField()
     updated_at = models.DateField()
     deleted_at = models.DateField()
     user_id = models.IntegerField()
-    date_of_publish = models.DateField()
+    publish_date = models.DateField()
     is_published = models.BooleanField()
 
     class Meta:
@@ -32,7 +32,7 @@ class Book_attribute(models.Model):
       db_table = "book_attribute"
 
 class Book_Chapter(models.Model):
-    book_id = models.ForeignKey(Book_Master, on_delete=models.CASCADE)
+    book_id = models.IntegerField()
     chapter_title = models.CharField(max_length=255) 
     chapter_sequence = models.IntegerField()
     author_note = models.CharField(max_length=255)
@@ -41,7 +41,7 @@ class Book_Chapter(models.Model):
     updated_at = models.DateField()
     deleted_at = models.DateField()
     user_id = models.IntegerField()
-    date_of_publish = models.DateField()
+    publish_date = models.DateField()
     is_published = models.BooleanField()
 
     class Meta:

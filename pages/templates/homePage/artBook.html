@@ -19,20 +19,21 @@
         {"breakpoint":480, "settings": {"slidesToShow": 1} },
         {"breakpoint":320, "settings": {"slidesToShow": 1} }
     ]'>
+        {% for book in books %}
             <div class="single-slide">
                 <div class="product-card">
                     <div class="product-header">
                         <a href="#" class="author">
-                            Lpple
+                            {{book.author}}
                         </a>
-                        <h3><a href="product-details.html">Revolutionize Your BOOK With These Easy
+                        <h3><a href="book/{{book.book_name}}">{{ book.book_name }}
                           </a></h3>
                     </div>
                     <div class="product-card--body">
                         <div class="card-image">
                             <img src="{% static 'image/products/product-2.jpg' %}" alt="">
                             <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
+                                <a href="book/{{book.book_name}}" class="hover-image">
                                     <img src="{% static 'image/products/product-1.jpg' %}" alt="">
                                 </a>
                                 <div class="hover-btns">
@@ -56,226 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="" class="author">
-                            Jpple
-                        </a>
-                        <h3><a href="product-details.html">Turn Your BOOK Into High Machine</a>
-                        </h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-2.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-1.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="" class="author">
-                            Wpple
-                        </a>
-                        <h3><a href="product-details.html">Create Better BOOK With The Help Of Your</a></h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-3.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-2.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="" class="author">
-                            Epple
-                        </a>
-                        <h3><a href="product-details.html">What You Can Learn From Bill Gates</a>
-                        </h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-5.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-4.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="" class="author">
-                            Hpple
-                        </a>
-                        <h3><a href="product-details.html">a Half Very Simple Things You To Save</a></h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-6.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-4.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="#" class="author">
-                            Bpple
-                        </a>
-                        <h3><a href="product-details.html">Here Is A Quick Cure For Book</a></h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-8.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-7.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="product-card">
-                    <div class="product-header">
-                        <a href="#" class="author">
-                            zpple
-                        </a>
-                        <h3><a href="product-details.html">Do You Really Need It? This Will Help You
-                          </a>
-                        </h3>
-                    </div>
-                    <div class="product-card--body">
-                        <div class="card-image">
-                            <img src="{% static 'image/products/product-13.jpg' %}" alt="">
-                            <div class="hover-contents">
-                                <a href="product-details.html" class="hover-image">
-                                    <img src="{% static 'image/products/product-11.jpg' %}" alt="">
-                                </a>
-                                <div class="hover-btns">
-                                    <a href="cart.html" class="single-btn">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a href="wishlist.html" class="single-btn">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a href="compare.html" class="single-btn">
-                                        <i class="fas fa-random"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#quickModal"
-                                        class="single-btn">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+        {% endfor %}    
         </div>
     </div>
 </section>
